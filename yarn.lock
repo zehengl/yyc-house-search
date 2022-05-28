@@ -11874,6 +11874,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"esri-loader@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "esri-loader@npm:3.5.0"
+  checksum: 8ca91e0ba379bf1e4994a5731df7ff354f9fdcbe750f5c3c50ef488bb6e35d04a9d3570ddc4b4cd692fab8ce5668134c2b852f9f808d661e207c1c74d9b03a41
+  languageName: node
+  linkType: hard
+
 "estraverse@npm:^4.1.1":
   version: 4.3.0
   resolution: "estraverse@npm:4.3.0"
@@ -23667,6 +23674,7 @@ __metadata:
     "@redwoodjs/forms": 1.5.1
     "@redwoodjs/router": 1.5.1
     "@redwoodjs/web": 1.5.1
+    esri-loader: ^3.5.0
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
