@@ -1,5 +1,7 @@
 # README
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ef409278-83c3-4900-9e20-a04178cfc4b3/deploy-status)](https://app.netlify.com/sites/yyc-house-search/deploys)
+
 Welcome to [RedwoodJS](https://redwoodjs.com)!
 
 > **Prerequisites**
