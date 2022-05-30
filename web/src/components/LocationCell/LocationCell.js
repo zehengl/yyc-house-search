@@ -26,14 +26,14 @@ export const QUERY = gql`
 `
 
 export const Loading = () => (
-  <div className="border border-green-300 shadow rounded-md p-4 max-w-sm w-full mx-auto mt-8">
+  <div className="border border-red-300 shadow rounded-md p-4 max-w-sm w-full mx-auto mt-8">
     <div className="animate-pulse flex space-x-4">
-      <div className="rounded-full bg-green-400 h-12 w-12"></div>
+      <div className="rounded-full bg-red-400 h-12 w-12"></div>
       <div className="flex-1 space-y-4 py-1">
-        <div className="h-4 bg-green-400 rounded w-3/4"></div>
+        <div className="h-4 bg-red-400 rounded w-3/4"></div>
         <div className="space-y-2">
-          <div className="h-4 bg-green-400 rounded"></div>
-          <div className="h-4 bg-green-400 rounded w-5/6"></div>
+          <div className="h-4 bg-red-400 rounded"></div>
+          <div className="h-4 bg-red-400 rounded w-5/6"></div>
         </div>
       </div>
     </div>
@@ -55,7 +55,7 @@ export const Success = ({ solar, assessment, tree, garbage }) => {
     <div className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
+          <h2 className="text-base text-red-600 font-semibold tracking-wide uppercase">
             Property Information
           </h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -70,7 +70,7 @@ export const Success = ({ solar, assessment, tree, garbage }) => {
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
             <div className="relative">
               <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -97,7 +97,7 @@ export const Success = ({ solar, assessment, tree, garbage }) => {
 
             <div className="relative">
               <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -129,7 +129,7 @@ export const Success = ({ solar, assessment, tree, garbage }) => {
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
             <div className="relative">
               <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -157,7 +157,7 @@ export const Success = ({ solar, assessment, tree, garbage }) => {
 
             <div className="relative">
               <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -190,7 +190,7 @@ export const Success = ({ solar, assessment, tree, garbage }) => {
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
             <div className="relative">
               <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -219,7 +219,7 @@ export const Success = ({ solar, assessment, tree, garbage }) => {
 
             <div className="relative">
               <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -241,8 +241,7 @@ export const Success = ({ solar, assessment, tree, garbage }) => {
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
                 Black bin is collected on {garbage.black}; Blue bin is collected
-                on {garbage.blue};<br /> Green bin is collected on{' '}
-                {garbage.green}.
+                on {garbage.blue}; Green bin is collected on {garbage.green}.
               </dd>
             </div>
           </dl>
