@@ -78,9 +78,9 @@ const HomePage = () => {
 
       const showPopup = (address, pt) => {
         let title, content
-
+        const baseUrl = 'https://yyc-house-search.netlify.app'
         if (address) {
-          content = `<strong>TBD</strong>`
+          content = `<a class="bg-white text-blue-500 font-semibold" target='_blank' href='${baseUrl}/location/${address}'>See detail.</a>`
           title = address
         } else {
           content = null
