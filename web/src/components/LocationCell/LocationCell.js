@@ -11,6 +11,8 @@ export const QUERY = gql`
       roll_number
       assessed_value
       assessed_year
+      latitude
+      longitude
     }
     tree: getTree(address: $address) {
       address
@@ -21,6 +23,11 @@ export const QUERY = gql`
       black
       blue
       green
+    }
+    schools: getSchools {
+      name
+      latitude
+      longitude
     }
   }
 `
@@ -50,7 +57,19 @@ export const Failure = ({ error }) => (
   </div>
 )
 
-export const Success = ({ solar, assessment, tree, garbage }) => {
+export const Success = ({ solar, assessment, tree, garbage, schools }) => {
+  let dist = (school) => {
+    return (
+      Math.pow(school.latitude - assessment.latitude, 2) +
+      Math.pow(school.longitude - assessment.longitude, 2)
+    )
+  }
+
+  let results = schools.filter((school) => {
+    return school.latitude & school.longitude
+  })
+  let nearby = results.sort((a, b) => dist(a) - dist(b)).slice(0, 8)
+
   return (
     <div className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -242,6 +261,41 @@ export const Success = ({ solar, assessment, tree, garbage }) => {
               <dd className="mt-2 ml-16 text-base text-gray-500">
                 Black bin is collected on {garbage.black}; Blue bin is collected
                 on {garbage.blue}; Green bin is collected on {garbage.green}.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div className="mt-10">
+          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+            <div className="relative">
+              <dt>
+                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    />
+                  </svg>
+                </div>
+                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  Nearby Schools
+                </p>
+              </dt>
+              <dd className="mt-2 ml-16 text-base text-gray-500">
+                {nearby.map((school) => (
+                  <p key={school.name}>{school.name}</p>
+                ))}
               </dd>
             </div>
           </dl>

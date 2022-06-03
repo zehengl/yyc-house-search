@@ -19,5 +19,7 @@ export const getAssessment = async ({ address }) => {
     roll_number: json[0].roll_number,
     assessed_value: json[0].assessed_value,
     assessed_year: json[0].roll_year,
+    latitude: json[0].latitude,
+    longitude: json[0].longitude,
   }
 }
