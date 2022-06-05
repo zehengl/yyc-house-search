@@ -33,6 +33,11 @@ export const QUERY = gql`
       latitude
       longitude
     }
+    stops: getStops(address: $address) {
+      name
+      latitude
+      longitude
+    }
   }
 `
 
@@ -61,20 +66,34 @@ export const Failure = ({ error }) => (
   </div>
 )
 
-export const Success = ({ solar, assessments, tree, garbage, schools }) => {
+export const Success = ({
+  solar,
+  assessments,
+  tree,
+  garbage,
+  schools,
+  stops,
+}) => {
   let assessment = assessments[assessments.length - 1]
-  let dist = (school) => {
-    let a = { latitude: school.latitude, longitude: school.longitude }
+  let dist = (addr) => {
+    let a = { latitude: addr.latitude, longitude: addr.longitude }
     let b = { latitude: assessment.latitude, longitude: assessment.longitude }
     return haversine(a, b)
   }
-  let results = schools.filter((school) => {
-    return school.latitude && school.longitude
-  })
-  let nearby = results
+  let valid = (addrs) => {
+    return addrs.filter((addr) => {
+      return addr.latitude && addr.longitude
+    })
+  }
+  let nearbySchools = valid(schools)
     .sort((a, b) => dist(a) - dist(b))
     .filter((school) => {
       return dist(school) < 1500
+    })
+  let nearbyStops = valid(stops)
+    .sort((a, b) => dist(a) - dist(b))
+    .filter((stop) => {
+      return dist(stop) < 400
     })
 
   return (
@@ -301,14 +320,44 @@ export const Success = ({ solar, assessments, tree, garbage, schools }) => {
                 </p>
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
-                {nearby.map((school) => (
+                {nearbySchools.map((school) => (
                   <p key={school.name}>{school.name}</p>
+                ))}
+              </dd>
+            </div>
+
+            <div className="relative">
+              <dt>
+                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    />
+                  </svg>
+                </div>
+                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  Nearby Stops <span className="text-sm">(within 400m)</span>
+                </p>
+              </dt>
+              <dd className="mt-2 ml-16 text-base text-gray-500">
+                {nearbyStops.map((stop) => (
+                  <p key={stop.name}>{stop.name}</p>
                 ))}
               </dd>
             </div>
           </dl>
         </div>
       </div>
+
       <div className="flex justify-center">
         <Plot
           data={[
