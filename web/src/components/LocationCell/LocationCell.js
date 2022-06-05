@@ -1,4 +1,5 @@
 import Plot from 'react-plotly.js'
+import haversine from 'haversine-distance'
 
 export const QUERY = gql`
   query GET_INFO($address: String!) {
@@ -63,15 +64,18 @@ export const Failure = ({ error }) => (
 export const Success = ({ solar, assessments, tree, garbage, schools }) => {
   let assessment = assessments[assessments.length - 1]
   let dist = (school) => {
-    return (
-      Math.pow(school.latitude - assessment.latitude, 2) +
-      Math.pow(school.longitude - assessment.longitude, 2)
-    )
+    let a = { latitude: school.latitude, longitude: school.longitude }
+    let b = { latitude: assessment.latitude, longitude: assessment.longitude }
+    return haversine(a, b)
   }
   let results = schools.filter((school) => {
-    return school.latitude & school.longitude
+    return school.latitude && school.longitude
   })
-  let nearby = results.sort((a, b) => dist(a) - dist(b)).slice(0, 8)
+  let nearby = results
+    .sort((a, b) => dist(a) - dist(b))
+    .filter((school) => {
+      return dist(school) < 1500
+    })
 
   return (
     <div className="py-12 bg-white">
@@ -293,7 +297,7 @@ export const Success = ({ solar, assessments, tree, garbage, schools }) => {
                   </svg>
                 </div>
                 <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  Nearby Schools
+                  Nearby Schools <span className="text-sm">(within 1.5km)</span>
                 </p>
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
