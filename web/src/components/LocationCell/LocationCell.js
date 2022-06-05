@@ -1,3 +1,5 @@
+import Plot from 'react-plotly.js'
+
 export const QUERY = gql`
   query GET_INFO($address: String!) {
     solar: getSolar(address: $address) {
@@ -6,13 +8,14 @@ export const QUERY = gql`
       ac_annually
       capacity_factor
     }
-    assessment: getAssessment(address: $address) {
+    assessments: getAssessment(address: $address) {
       address
       roll_number
       assessed_value
       assessed_year
       latitude
       longitude
+      year_of_construction
     }
     tree: getTree(address: $address) {
       address
@@ -57,14 +60,14 @@ export const Failure = ({ error }) => (
   </div>
 )
 
-export const Success = ({ solar, assessment, tree, garbage, schools }) => {
+export const Success = ({ solar, assessments, tree, garbage, schools }) => {
+  let assessment = assessments[assessments.length - 1]
   let dist = (school) => {
     return (
       Math.pow(school.latitude - assessment.latitude, 2) +
       Math.pow(school.longitude - assessment.longitude, 2)
     )
   }
-
   let results = schools.filter((school) => {
     return school.latitude & school.longitude
   })
@@ -138,7 +141,8 @@ export const Success = ({ solar, assessment, tree, garbage, schools }) => {
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
                 The property was assessed of ${assessment.assessed_value} in{' '}
-                {assessment.assessed_year}.
+                {assessment.assessed_year}, and originally built in{' '}
+                {assessment.year_of_construction}.
               </dd>
             </div>
           </dl>
@@ -300,6 +304,24 @@ export const Success = ({ solar, assessment, tree, garbage, schools }) => {
             </div>
           </dl>
         </div>
+      </div>
+      <div className="flex justify-center">
+        <Plot
+          data={[
+            {
+              type: 'bar',
+              x: assessments.map((assessment) => assessment.assessed_year),
+              y: assessments.map((assessment) => assessment.assessed_value),
+              marker: {
+                color: 'rgb(239 68 68);',
+              },
+            },
+          ]}
+          layout={{
+            title: 'Assessment History',
+            showlegend: false,
+          }}
+        />
       </div>
     </div>
   )

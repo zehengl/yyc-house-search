@@ -6,8 +6,9 @@ export const schema = gql`
     assessed_year: String!
     latitude: Float!
     longitude: Float!
+    year_of_construction: String
   }
   type Query {
-    getAssessment(address: String!): Assessment! @skipAuth
+    getAssessment(address: String!): [Assessment]! @skipAuth
   }
 `
