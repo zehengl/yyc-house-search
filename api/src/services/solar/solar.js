@@ -7,11 +7,13 @@ export const getSolar = async ({ address }) => {
   const json = await response.json()
 
   if (json.length === 0) {
-    return new Error(
-      `Sorry. No solar potential data can be found for ${decodeURIComponent(
-        address
-      )}.`
-    )
+    return {
+      address: decodeURIComponent(address),
+      number_of_panels: null,
+      ac_annually: null,
+      area: null,
+      capacity_factor: null,
+    }
   }
 
   const sum = (prev, next) => prev + next

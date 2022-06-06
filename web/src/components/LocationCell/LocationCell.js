@@ -172,67 +172,68 @@ export const Success = ({
           </dl>
         </div>
 
-        <div className="mt-10">
-          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-            <div className="relative">
-              <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                    />
-                  </svg>
-                </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  Solar Panels
-                </p>
-              </dt>
-              <dd className="mt-2 ml-16 text-base text-gray-500">
-                The rooftop can fit optimally as many as{' '}
-                {solar.number_of_panels} solar panels.
-              </dd>
-            </div>
+        {solar.number_of_panels && (
+          <div className="mt-10">
+            <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+              <div className="relative">
+                <dt>
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                      />
+                    </svg>
+                  </div>
+                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                    Solar Panels
+                  </p>
+                </dt>
+                <dd className="mt-2 ml-16 text-base text-gray-500">
+                  The rooftop can fit optimally as many as{' '}
+                  {solar.number_of_panels} solar panels.
+                </dd>
+              </div>
 
-            <div className="relative">
-              <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-                    />
-                  </svg>
-                </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  Yearly AC
-                </p>
-              </dt>
-              <dd className="mt-2 ml-16 text-base text-gray-500">
-                The AC power generated from those solar panels per year is as
-                much as {solar.ac_annually} kwh, with a capacity factor of{' '}
-                {solar.capacity_factor}.
-              </dd>
-            </div>
-          </dl>
-        </div>
-
+              <div className="relative">
+                <dt>
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                    Yearly AC
+                  </p>
+                </dt>
+                <dd className="mt-2 ml-16 text-base text-gray-500">
+                  The AC power generated from those solar panels per year is as
+                  much as {solar.ac_annually} kwh, with a capacity factor of{' '}
+                  {solar.capacity_factor}.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        )}
         <div className="mt-10">
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
             <div className="relative">
@@ -287,8 +288,18 @@ export const Success = ({
                 </p>
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
-                Black bin is collected on {garbage.black}; Blue bin is collected
-                on {garbage.blue}; Green bin is collected on {garbage.green}.
+                {garbage.black && (
+                  <p>Black bin is collected on {garbage.black}.</p>
+                )}
+                {garbage.blue && (
+                  <p>Blue bin is collected on {garbage.blue}.</p>
+                )}
+                {garbage.green && (
+                  <p>Green bin is collected on {garbage.green}.</p>
+                )}
+                {!garbage.black && !garbage.blue && !garbage.green && (
+                  <p>No garbage collection date found.</p>
+                )}
               </dd>
             </div>
           </dl>
@@ -321,9 +332,13 @@ export const Success = ({
                 </p>
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
-                {nearbySchools.map((school) => (
-                  <p key={school.name}>{school.name}</p>
-                ))}
+                {nearbySchools.length > 0 ? (
+                  nearbySchools.map((school) => (
+                    <p key={school.name}>{school.name}</p>
+                  ))
+                ) : (
+                  <p>No nearby schools found.</p>
+                )}
               </dd>
             </div>
 
@@ -356,11 +371,15 @@ export const Success = ({
                 </p>
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
-                {nearbyStops.map((stop) => (
-                  <p key={stop.name}>
-                    {stop.route_name} - {stop.name}
-                  </p>
-                ))}
+                {nearbyStops.length > 0 ? (
+                  nearbyStops.map((stop) => (
+                    <p key={stop.name}>
+                      {stop.route_name} - {stop.name}
+                    </p>
+                  ))
+                ) : (
+                  <p>No nearby routes/stops found.</p>
+                )}
               </dd>
             </div>
           </dl>

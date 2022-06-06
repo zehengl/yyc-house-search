@@ -7,11 +7,12 @@ export const getGarbage = async ({ address }) => {
   const json = await response.json()
 
   if (json.length === 0) {
-    return new Error(
-      `Sorry. No garbage collection data can be found for ${decodeURIComponent(
-        address
-      )}.`
-    )
+    return {
+      address: decodeURIComponent(address),
+      black: null,
+      blue: null,
+      green: null,
+    }
   }
 
   return {
