@@ -35,6 +35,7 @@ export const QUERY = gql`
     }
     stops: getStops(address: $address) {
       name
+      route_name
       latitude
       longitude
     }
@@ -350,12 +351,15 @@ export const Success = ({
                   </svg>
                 </div>
                 <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  Nearby Stops <span className="text-sm">(within 400m)</span>
+                  Nearby Routes/Stops{' '}
+                  <span className="text-sm">(within 400m)</span>
                 </p>
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
                 {nearbyStops.map((stop) => (
-                  <p key={stop.name}>{stop.name}</p>
+                  <p key={stop.name}>
+                    {stop.route_name} - {stop.name}
+                  </p>
                 ))}
               </dd>
             </div>
