@@ -358,7 +358,7 @@ export const Success = ({
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className="hidden md:flex justify-center">
         <Plot
           data={[
             {
