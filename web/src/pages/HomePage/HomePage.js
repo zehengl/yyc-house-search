@@ -1,4 +1,3 @@
-import { Link, routes } from '@redwoodjs/router'
 import { useEffect, useRef } from 'react'
 
 import AppLayout from 'src/layouts/AppLayout'
@@ -21,13 +20,14 @@ const HomePage = () => {
         css: true,
       }
     ).then(([Map, TileLayer, MapView, Search, Locator]) => {
-      const map = new Map()
-
+      const basemap = new TileLayer({
+        url: 'https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/Calgary_Basemap/MapServer',
+      })
       const imagery = new TileLayer({
         url: 'https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/CurrentOrthophoto_WMASP/MapServer',
+        visible: false,
       })
-
-      map.layers.add(imagery)
+      const map = new Map({ layers: [basemap, imagery] })
 
       const view = new MapView({
         container: mapRef.current,
@@ -53,6 +53,12 @@ const HomePage = () => {
         includeDefaultSources: false,
         view: view,
       })
+
+      const imageryLayerToggle = document.getElementById('imageryLayerToggle')
+      imageryLayerToggle.addEventListener('change', () => {
+        imagery.visible = imageryLayerToggle.checked
+      })
+
       view.ui.add(search, 'top-right')
 
       view.on('click', (evt) => {
@@ -106,6 +112,19 @@ const HomePage = () => {
       <AppLayout>
         <MetaTags title="Home" description="Home page" />
         <div style={{ height: '100vh' }} ref={mapRef} />
+        <span
+          className="esri-widget"
+          style={{
+            top: '3.5rem',
+            right: '1rem',
+            position: 'absolute',
+            padding: '.5rem',
+            opacity: 0.75,
+          }}
+        >
+          {' '}
+          <input type="checkbox" id="imageryLayerToggle" /> Aerial Imagery{' '}
+        </span>
       </AppLayout>
     </>
   )

@@ -1,5 +1,3 @@
-import { Link, routes } from '@redwoodjs/router'
-
 import AppLayout from 'src/layouts/AppLayout'
 import LocationCell from 'src/components/LocationCell'
 import { MetaTags } from '@redwoodjs/web'
