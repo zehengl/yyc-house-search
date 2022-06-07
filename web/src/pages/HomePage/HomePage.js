@@ -23,11 +23,11 @@ const HomePage = () => {
     ).then(([Map, TileLayer, MapView, Search, Locator]) => {
       const map = new Map()
 
-      const basemap = new TileLayer({
-        url: 'https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/Calgary_Basemap/MapServer',
+      const imagery = new TileLayer({
+        url: 'https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/CurrentOrthophoto_WMASP/MapServer',
       })
 
-      map.layers.add(basemap)
+      map.layers.add(imagery)
 
       const view = new MapView({
         container: mapRef.current,
