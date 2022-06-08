@@ -115,11 +115,11 @@ const HomePage = () => {
         <span
           className="esri-widget"
           style={{
-            top: '3.5rem',
-            right: '1rem',
+            top: '1rem',
+            right: '18rem',
             position: 'absolute',
             padding: '.5rem',
-            opacity: 0.75,
+            opacity: 0.8,
           }}
         >
           {' '}
