@@ -115,8 +115,8 @@ const HomePage = () => {
         <span
           className="esri-widget"
           style={{
-            top: '1rem',
-            right: '18rem',
+            top: '5.5rem',
+            left: '1rem',
             position: 'absolute',
             padding: '.5rem',
             opacity: 0.8,
