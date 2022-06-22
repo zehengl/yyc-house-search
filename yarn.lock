@@ -7238,7 +7238,7 @@ __metadata:
   dependencies:
     "@redwoodjs/api": ^2.0.0
     "@redwoodjs/graphql-server": ^2.0.0
-    cross-undici-fetch: ^0.4.7
+    cross-undici-fetch: ^0.4.8
   languageName: unknown
   linkType: soft
 
@@ -10106,9 +10106,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-undici-fetch@npm:^0.4.7":
-  version: 0.4.7
-  resolution: "cross-undici-fetch@npm:0.4.7"
+"cross-undici-fetch@npm:^0.4.8":
+  version: 0.4.8
+  resolution: "cross-undici-fetch@npm:0.4.8"
   dependencies:
     abort-controller: ^3.0.0
     busboy: ^1.6.0
@@ -10117,7 +10117,7 @@ __metadata:
     node-fetch: ^2.6.7
     undici: ^5.1.0
     web-streams-polyfill: ^3.2.0
-  checksum: bf7cb7d62e865bebed137f30574ea0fce6dd747d1ed148273461509864fb7c76bc2ffa5eb4185c6b0b026cbbd079fe641d4d2c298da485e90b216396041f0bcb
+  checksum: 978ed93591cfbe921a0b6dcd5e8ae728307d5733e75b647b8df42d41ff6fc411545e2c13946390e541ace1393dbd96971eb79c6547574051cf42a954faa5b6aa
   languageName: node
   linkType: hard
 
