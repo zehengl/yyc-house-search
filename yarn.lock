@@ -20245,9 +20245,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"plotly.js@npm:^2.12.1":
-  version: 2.12.1
-  resolution: "plotly.js@npm:2.12.1"
+"plotly.js@npm:^2.13.1":
+  version: 2.13.1
+  resolution: "plotly.js@npm:2.13.1"
   dependencies:
     "@plotly/d3": 3.8.0
     "@plotly/d3-sankey": 0.7.2
@@ -20282,6 +20282,7 @@ __metadata:
     mouse-wheel: ^1.2.0
     native-promise-only: ^0.8.1
     parse-svg-path: ^0.1.2
+    point-in-polygon: ^1.1.0
     polybooljs: ^1.2.0
     probe-image-size: ^7.2.3
     regl: "npm:@plotly/regl@^2.1.2"
@@ -20297,7 +20298,7 @@ __metadata:
     topojson-client: ^3.1.0
     webgl-context: ^2.2.0
     world-calendars: ^1.0.3
-  checksum: 765c8f4b553b303bd6517cf513d1069ed27135956e617a7395af60406d143163098730007ea1fd9d20d8daea512504b19596a7b78c4a367253687b0d6eea672d
+  checksum: 5bd15ceabbee1636a3174333b2fb9919e7425c7c2dbb1a1188e1c6b45606b4bac396076a1c7e4d9bfd6be33b9711ecd73f9a5d1d3c1de743c456178e2b252ee2
   languageName: node
   linkType: hard
 
@@ -20314,6 +20315,13 @@ __metadata:
   dependencies:
     ts-pnp: ^1.1.6
   checksum: 6cedab8a9cd129b9f58408023f80cad528e361685f50c2149da7ad8fb79bd2043d3250c68b8723aa43ecdb913931edf04ecaa4d7afe719d0e151055d41779599
+  languageName: node
+  linkType: hard
+
+"point-in-polygon@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "point-in-polygon@npm:1.1.0"
+  checksum: de00419585ee25555d97585b7a23eeb2464a87ef29404264bee55654ca2ecab5a5a99d33e689c07d045faf80091e838f44a1fd130bdd6134493df53114947343
   languageName: node
   linkType: hard
 
@@ -25821,7 +25829,7 @@ __metadata:
     "@redwoodjs/web": ^2.1.0
     esri-loader: ^3.5.0
     haversine-distance: ^1.2.1
-    plotly.js: ^2.12.1
+    plotly.js: ^2.13.1
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
