@@ -15,10 +15,25 @@ export const getGarbage = async ({ address }) => {
     }
   }
 
+  const black_day =
+    json[0].collection_day_summer == json[0].collection_day_winter
+      ? json[0].collection_day_summer
+      : `${json[0].collection_day_summer} (summer) or ${json[0].collection_day_winter} (winter)`
+
+  const blue_day =
+    json[1].collection_day_summer == json[1].collection_day_winter
+      ? json[1].collection_day_summer
+      : `${json[1].collection_day_summer} (summer) or ${json[1].collection_day_winter} (winter)`
+
+  const green_day =
+    json[2].collection_day_summer == json[2].collection_day_winter
+      ? json[2].collection_day_summer
+      : `${json[2].collection_day_summer} (summer) or ${json[2].collection_day_winter} (winter)`
+
   return {
     address: decodeURIComponent(address),
-    black: json[0].collection_day,
-    blue: json[1].collection_day,
-    green: json[2].collection_day,
+    black: black_day,
+    blue: blue_day,
+    green: green_day,
   }
 }
