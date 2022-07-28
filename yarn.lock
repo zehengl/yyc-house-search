@@ -20260,9 +20260,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"plotly.js@npm:^2.13.2":
-  version: 2.13.2
-  resolution: "plotly.js@npm:2.13.2"
+"plotly.js@npm:^2.13.3":
+  version: 2.13.3
+  resolution: "plotly.js@npm:2.13.3"
   dependencies:
     "@plotly/d3": 3.8.0
     "@plotly/d3-sankey": 0.7.2
@@ -20313,7 +20313,7 @@ __metadata:
     topojson-client: ^3.1.0
     webgl-context: ^2.2.0
     world-calendars: ^1.0.3
-  checksum: 79a22d18fcba95234a4b579d506e9ff0d2314d6b61789bdb7799ba9eba84adf5ee74ede8ccb8be6f2fb07de836fc8c01cc74ea290d162248dc62923ec5a041ad
+  checksum: 113a5e0d05765b9938dc0c77e8c5a18fa6d2ba761e1e23b6795e0788f1fac862cb2108edad1e25fd2df7b3ae7614ee67aeb779ffb7eb9d72dcff57ed25c310f0
   languageName: node
   linkType: hard
 
@@ -25844,7 +25844,7 @@ __metadata:
     "@redwoodjs/web": ^2.1.1
     esri-loader: ^3.5.0
     haversine-distance: ^1.2.1
-    plotly.js: ^2.13.2
+    plotly.js: ^2.13.3
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
