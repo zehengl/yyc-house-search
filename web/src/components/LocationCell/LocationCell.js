@@ -96,7 +96,12 @@ export const Success = ({
     .filter((stop) => {
       return dist(stop) < 400
     })
-  let nearbyRoutes = [...new Set(nearbyStops.map((item) => item.route_name))]
+  let nearbyRouteNames = [
+    ...new Set(nearbyStops.map((item) => item.route_name)),
+  ].sort()
+  let nearbySchoolNames = [
+    ...new Set(nearbySchools.map((item) => item.name)),
+  ].sort()
 
   return (
     <div className="py-12 bg-white">
@@ -333,10 +338,8 @@ export const Success = ({
                 </p>
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
-                {nearbySchools.length > 0 ? (
-                  nearbySchools.map((school) => (
-                    <p key={school.name}>{school.name}</p>
-                  ))
+                {nearbySchoolNames.length > 0 ? (
+                  nearbySchoolNames.map((name) => <p key={name}>{name}</p>)
                 ) : (
                   <p>No nearby schools found.</p>
                 )}
@@ -371,8 +374,8 @@ export const Success = ({
                 </p>
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
-                {nearbyRoutes.length > 0 ? (
-                  nearbyRoutes.map((route) => <p key={route}>{route}</p>)
+                {nearbyRouteNames.length > 0 ? (
+                  nearbyRouteNames.map((name) => <p key={name}>{name}</p>)
                 ) : (
                   <p>No nearby routes/stops found.</p>
                 )}
