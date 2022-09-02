@@ -13,9 +13,9 @@
     ]
   },
   "dependencies": {
-    "@redwoodjs/forms": "^2.2.2",
-    "@redwoodjs/router": "^2.2.2",
-    "@redwoodjs/web": "^2.2.2",
+    "@redwoodjs/forms": "^2.2.3",
+    "@redwoodjs/router": "^2.2.3",
+    "@redwoodjs/web": "^2.2.3",
     "esri-loader": "^3.5.0",
     "haversine-distance": "^1.2.1",
     "plotly.js": "^2.14.0",
