@@ -8,7 +8,10 @@
     "pflannery.vscode-versionlens",
     "editorconfig.editorconfig",
     "prisma.prisma",
-    "graphql.vscode-graphql"
+    "graphql.vscode-graphql",
+    "vscode-icons-team.vscode-icons",
+    "naumovs.theme-oceanicnext",
+    "pkief.material-product-icons"
   ],
   "unwantedRecommendations": []
 }

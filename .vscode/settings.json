@@ -5,6 +5,10 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "workbench.colorTheme": "Oceanic Next (dimmed bg)",
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.productIconTheme": "material-product-icons",
   "[prisma]": {
     "editor.formatOnSave": true
   }
