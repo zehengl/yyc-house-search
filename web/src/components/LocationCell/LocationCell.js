@@ -39,6 +39,16 @@ export const QUERY = gql`
       latitude
       longitude
     }
+    publicLibraries: getPublicLibraries {
+      name
+      latitude
+      longitude
+    }
+    recreations: getRecreations {
+      name
+      latitude
+      longitude
+    }
   }
 `
 
@@ -74,6 +84,8 @@ export const Success = ({
   garbage,
   schools,
   stops,
+  publicLibraries,
+  recreations,
 }) => {
   let assessment = assessments[assessments.length - 1]
   let dist = (addr) => {
@@ -96,11 +108,27 @@ export const Success = ({
     .filter((stop) => {
       return dist(stop) < 400
     })
+  let nearbyPublicLibraries = valid(publicLibraries)
+    .sort((a, b) => dist(a) - dist(b))
+    .filter((publicLibrary) => {
+      return dist(publicLibrary) < 3000
+    })
+  let nearbyRecreations = valid(recreations)
+    .sort((a, b) => dist(a) - dist(b))
+    .filter((recreation) => {
+      return dist(recreation) < 3000
+    })
   let nearbyRouteNames = [
     ...new Set(nearbyStops.map((item) => item.route_name)),
   ].sort()
   let nearbySchoolNames = [
     ...new Set(nearbySchools.map((item) => item.name)),
+  ].sort()
+  let nearbyPublicLibraryNames = [
+    ...new Set(nearbyPublicLibraries.map((item) => item.name)),
+  ].sort()
+  let nearbyRecreationNames = [
+    ...new Set(nearbyRecreations.map((item) => item.name)),
   ].sort()
 
   return (
@@ -378,6 +406,74 @@ export const Success = ({
                   nearbyRouteNames.map((name) => <p key={name}>{name}</p>)
                 ) : (
                   <p>No nearby routes/stops found.</p>
+                )}
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div className="mt-10">
+          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+            <div className="relative">
+              <dt>
+                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"
+                    />
+                  </svg>
+                </div>
+                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  Nearby Libraries <span className="text-sm">(within 3km)</span>
+                </p>
+              </dt>
+              <dd className="mt-2 ml-16 text-base text-gray-500">
+                {nearbyPublicLibraryNames.length > 0 ? (
+                  nearbyPublicLibraryNames.map((name) => (
+                    <p key={name}>{name}</p>
+                  ))
+                ) : (
+                  <p>No nearby public libraries found.</p>
+                )}
+              </dd>
+            </div>
+
+            <div className="relative">
+              <dt>
+                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3"
+                    />
+                  </svg>
+                </div>
+                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  Nearby Recs <span className="text-sm">(within 3km)</span>
+                </p>
+              </dt>
+              <dd className="mt-2 ml-16 text-base text-gray-500">
+                {nearbyRecreationNames.length > 0 ? (
+                  nearbyRecreationNames.map((name) => <p key={name}>{name}</p>)
+                ) : (
+                  <p>No nearby recreation center found.</p>
                 )}
               </dd>
             </div>
