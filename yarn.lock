@@ -21717,15 +21717,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-plotly.js@npm:^2.5.1":
-  version: 2.5.1
-  resolution: "react-plotly.js@npm:2.5.1"
+"react-plotly.js@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "react-plotly.js@npm:2.6.0"
   dependencies:
-    prop-types: ^15.7.2
+    prop-types: ^15.8.1
   peerDependencies:
     plotly.js: ">1.34.0"
     react: ">0.13.0"
-  checksum: e16c1f5862bf536eea6a1551a1a9d294601acd86e3460b35f644325dd55142e8f485088f123988eb8acb7eecbba0f0f5291d8a1122292430bee59f377eaa275e
+  checksum: 9b5ba8e33782daa9624d79295975d08d4c7581bac41d67d497eec0a306e4d030465a1e8282fab145bc02705fe96262f6fb0d214133657c480982fc268763644a
   languageName: node
   linkType: hard
 
@@ -26052,7 +26052,7 @@ __metadata:
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
-    react-plotly.js: ^2.5.1
+    react-plotly.js: ^2.6.0
   languageName: unknown
   linkType: soft
 
