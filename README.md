@@ -39,7 +39,7 @@ yarn rw dev
   - [School Locations](https://data.calgary.ca/Services-and-Amenities/School-Locations/fd9t-tdn2)
   - [Waste and Recycling Collection Schedule](https://data.calgary.ca/Services-and-Amenities/Waste-and-Recycling-Collection-Schedule/jq4t-b745)
   - [Calgary Transit Stops By Route Cross Reference](https://data.calgary.ca/Transportation-Transit/Calgary-Transit-Stops-By-Route-Cross-Reference/pm3p-838w)
-  - [Recreation Facilities](https://data.calgary.ca/Recreation-and-Culture/Recreation-Facilities/ssrd-qps9)
+  - [Recreation Facilities](https://data.calgary.ca/Recreation-and-Culture/Recreation-Facilities/hxfu-6d96)
   - [Calgary Public Library Locations and Hours](https://data.calgary.ca/Recreation-and-Culture/Calgary-Public-Library-Locations-and-Hours/m9y7-ui7j)
 - Various mapping components from City of Calgary’s Geospatial Business Solutions (GBS)
   - [Aerial Image](https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/CurrentOrthophoto_WMASP/MapServer?cacheKey=8c58e2af64f46f91)
