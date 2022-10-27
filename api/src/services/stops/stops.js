@@ -3,7 +3,7 @@ import { fetch } from 'cross-undici-fetch'
 export const getStops = async ({ address }) => {
   let parts = decodeURIComponent(address).split(' ').reverse()
   const response = await fetch(
-    `https://data.calgary.ca/resource/pm3p-838w.json?STATUS=Active&$limit=3000&$q=${parts[0]}`
+    `https://data.calgary.ca/resource/pm3p-838w.json?STATUS=ACTIVE&$limit=3000&$q=${parts[0]}`
   )
   const json = await response.json()
 
