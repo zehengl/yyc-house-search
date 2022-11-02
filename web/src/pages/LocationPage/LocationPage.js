@@ -1,6 +1,7 @@
-import AppLayout from 'src/layouts/AppLayout'
-import LocationCell from 'src/components/LocationCell'
 import { MetaTags } from '@redwoodjs/web'
+
+import LocationCell from 'src/components/LocationCell'
+import AppLayout from 'src/layouts/AppLayout'
 
 const LocationPage = ({ address }) => {
   return (

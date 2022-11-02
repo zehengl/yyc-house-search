@@ -1,8 +1,10 @@
 import { useEffect, useRef } from 'react'
 
-import AppLayout from 'src/layouts/AppLayout'
-import { MetaTags } from '@redwoodjs/web'
 import { loadModules } from 'esri-loader'
+
+import { MetaTags } from '@redwoodjs/web'
+
+import AppLayout from 'src/layouts/AppLayout'
 
 const HomePage = () => {
   const mapRef = useRef()
