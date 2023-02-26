@@ -5937,10 +5937,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plotly/d3@npm:3.8.0":
-  version: 3.8.0
-  resolution: "@plotly/d3@npm:3.8.0"
-  checksum: 642a757355a8ccbe7c146921848628d5bfea47fff301e781e9ac833dc8821393924667bc4804d2068d527fba6c8778a5ff5a30a9f492f05bcb76b5d72e275230
+"@plotly/d3@npm:3.8.1":
+  version: 3.8.1
+  resolution: "@plotly/d3@npm:3.8.1"
+  checksum: 71473d9f495ba415c3f2d4af9186de7e5fae4e38283d89f88921a736d6bd7187227af9d54da7927f89f3e5e4042931df9e6103163293e644e04ca327c752c4d1
   languageName: node
   linkType: hard
 
@@ -13665,10 +13665,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"d3-color@npm:1":
-  version: 1.4.1
-  resolution: "d3-color@npm:1.4.1"
-  checksum: 668721dedc1d7e84aa9b3c51ccbaa1facd92ae9303d86ea0d5d0cf589dab892bc4cc7e155696537ed43e8f053d3ad0dde86363e1a789bad800a786f2ede527d7
+"d3-color@npm:1 - 3":
+  version: 3.1.0
+  resolution: "d3-color@npm:3.1.0"
+  checksum: a4e20e1115fa696fce041fbe13fbc80dc4c19150fa72027a7c128ade980bc0eeeba4bcf28c9e21f0bce0e0dbfe7ca5869ef67746541dcfda053e4802ad19783c
   languageName: node
   linkType: hard
 
@@ -13732,12 +13732,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"d3-interpolate@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "d3-interpolate@npm:1.4.0"
+"d3-interpolate@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "d3-interpolate@npm:3.0.1"
   dependencies:
-    d3-color: 1
-  checksum: 33274a06d5969f7cf8477f490dd9bea6cf2f5e89da800e0db17e1b6663dfcc288ebc34ae85f891e83f59f87086e9468db0614281b9fe8ba50162d8a45149ed0f
+    d3-color: 1 - 3
+  checksum: 19f4b4daa8d733906671afff7767c19488f51a43d251f8b7f484d5d3cfc36c663f0a66c38fe91eee30f40327443d799be17169f55a293a3ba949e84e57a33e6a
   languageName: node
   linkType: hard
 
@@ -23124,11 +23124,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"plotly.js@npm:^2.18.0":
-  version: 2.18.0
-  resolution: "plotly.js@npm:2.18.0"
+"plotly.js@npm:^2.18.2":
+  version: 2.18.2
+  resolution: "plotly.js@npm:2.18.2"
   dependencies:
-    "@plotly/d3": 3.8.0
+    "@plotly/d3": 3.8.1
     "@plotly/d3-sankey": 0.7.2
     "@plotly/d3-sankey-circular": 0.33.1
     "@turf/area": ^6.4.0
@@ -23145,7 +23145,7 @@ __metadata:
     d3-geo: ^1.12.1
     d3-geo-projection: ^2.9.0
     d3-hierarchy: ^1.1.9
-    d3-interpolate: ^1.4.0
+    d3-interpolate: ^3.0.1
     d3-time: ^1.1.0
     d3-time-format: ^2.2.3
     fast-isnumeric: ^1.1.4
@@ -23177,7 +23177,7 @@ __metadata:
     topojson-client: ^3.1.0
     webgl-context: ^2.2.0
     world-calendars: ^1.0.3
-  checksum: ae065cd51726e5e4bbe8d59ec9353f8d42398682bdad88d6907e0ed6f08183b804b80ec2d0cda5b1a1938e6f7be5cf2a7601a817151a6045a253b5fb13ea2e92
+  checksum: a95df2ceaf35cec6d5b6465f79769326816f298698018612efa3d72ad2e69aa75f0a2fc676410c9178f581a05a6b5b3b4751198311f72df0e032d92ad1b06f92
   languageName: node
   linkType: hard
 
@@ -28880,7 +28880,7 @@ __metadata:
     "@redwoodjs/web": 4.2.0
     esri-loader: ^3.5.0
     haversine-distance: ^1.2.1
-    plotly.js: ^2.18.0
+    plotly.js: ^2.18.2
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
