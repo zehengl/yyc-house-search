@@ -32,6 +32,7 @@ yarn rw dev
 ## Credits
 
 - [Logo](https://www.iconfinder.com/icons/299061/house_icon) by [Paomedia](https://www.iconfinder.com/paomedia)
+- [Icons](https://heroicons.com)
 - Various datasets from [City of Calgary’s Open Data Portal](https://data.calgary.ca)
   - [Property Assessments](https://data.calgary.ca/Government/Property-Assessments/6zp6-pxei)
   - [Residential Solar Photovoltaic (PV) System Potential](https://data.calgary.ca/Environment/Residential-Solar-Photovoltaic-PV-System-Potential/k85e-i265)
@@ -41,7 +42,9 @@ yarn rw dev
   - [Calgary Transit Stops By Route Cross Reference](https://data.calgary.ca/Transportation-Transit/Calgary-Transit-Stops-By-Route-Cross-Reference/pm3p-838w)
   - [Recreation Facilities](https://data.calgary.ca/Recreation-and-Culture/Recreation-Facilities/hxfu-6d96)
   - [Calgary Public Library Locations and Hours](https://data.calgary.ca/Recreation-and-Culture/Calgary-Public-Library-Locations-and-Hours/m9y7-ui7j)
+  - [Community Services](https://data.calgary.ca/Services-and-Amenities/Community-Services/x34e-bcjz)
 - Various mapping components from City of Calgary’s Geospatial Business Solutions (GBS)
   - [Aerial Image](https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/CurrentOrthophoto_WMASP/MapServer?cacheKey=8c58e2af64f46f91)
   - [Basemap](https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/Calgary_Basemap/MapServer?cacheKey=831504eaa9b2633d)
   - [Geocoder](http://gis.calgary.ca/arcgis/rest/services/pub_Locators/CalgaryUniversalLocator/GeocodeServer)
+
