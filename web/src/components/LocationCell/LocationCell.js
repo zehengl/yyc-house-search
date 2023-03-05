@@ -1,5 +1,5 @@
-import Plot from 'react-plotly.js'
 import haversine from 'haversine-distance'
+import Plot from 'react-plotly.js'
 
 export const QUERY = gql`
   query GET_INFO($address: String!) {
@@ -49,6 +49,11 @@ export const QUERY = gql`
       latitude
       longitude
     }
+    hospitals: getHospitals {
+      name
+      latitude
+      longitude
+    }
   }
 `
 
@@ -86,6 +91,7 @@ export const Success = ({
   stops,
   publicLibraries,
   recreations,
+  hospitals,
 }) => {
   let assessment = assessments[assessments.length - 1]
   let dist = (addr) => {
@@ -118,6 +124,11 @@ export const Success = ({
     .filter((recreation) => {
       return dist(recreation) < 3000
     })
+  let nearbyHospitals = valid(hospitals)
+    .sort((a, b) => dist(a) - dist(b))
+    .filter((stop) => {
+      return dist(stop) < 3000
+    })
   let nearbyRouteNames = [
     ...new Set(nearbyStops.map((item) => item.route_name)),
   ].sort()
@@ -129,6 +140,9 @@ export const Success = ({
   ].sort()
   let nearbyRecreationNames = [
     ...new Set(nearbyRecreations.map((item) => item.name)),
+  ].sort()
+  let nearbyHospitalNames = [
+    ...new Set(nearbyHospitals.map((item) => item.name)),
   ].sort()
 
   return (
@@ -214,16 +228,16 @@ export const Success = ({
                   <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
                       fill="none"
                       viewBox="0 0 24 24"
+                      strokeWidth="1.5"
                       stroke="currentColor"
+                      className="w-6 h-6"
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                        d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
                       />
                     </svg>
                   </div>
@@ -474,6 +488,41 @@ export const Success = ({
                   nearbyRecreationNames.map((name) => <p key={name}>{name}</p>)
                 ) : (
                   <p>No nearby recreation center found.</p>
+                )}
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div className="mt-10">
+          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+            <div className="relative">
+              <dt>
+                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
+                    />
+                  </svg>
+                </div>
+                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  Nearby Hospitals <span className="text-sm">(within 3km)</span>
+                </p>
+              </dt>
+              <dd className="mt-2 ml-16 text-base text-gray-500">
+                {nearbyHospitalNames.length > 0 ? (
+                  nearbyHospitalNames.map((name) => <p key={name}>{name}</p>)
+                ) : (
+                  <p>No nearby Hospitals found.</p>
                 )}
               </dd>
             </div>
