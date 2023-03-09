@@ -10,7 +10,6 @@ A Jamstack app to display various property information
 
 ## Getting Started
 
-
 > **Prerequisites**
 >
 > - Redwood requires [Node.js](https://nodejs.org/en/) (>=14.19.x <=16.x) and [Yarn](https://yarnpkg.com/) (>=1.15)
@@ -27,7 +26,6 @@ Then fire it up:
 ```
 yarn rw dev
 ```
-
 
 ## Credits
 
@@ -47,4 +45,3 @@ yarn rw dev
   - [Aerial Image](https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/CurrentOrthophoto_WMASP/MapServer?cacheKey=8c58e2af64f46f91)
   - [Basemap](https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/Calgary_Basemap/MapServer?cacheKey=831504eaa9b2633d)
   - [Geocoder](http://gis.calgary.ca/arcgis/rest/services/pub_Locators/CalgaryUniversalLocator/GeocodeServer)
-
