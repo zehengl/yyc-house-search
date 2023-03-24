@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678085-house-512.png" alt="logo" height="196">
+    <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678085-house-512.png" alt="logo" height="128">
 </div>
 
 # yyc-house-search
