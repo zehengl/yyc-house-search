@@ -2,7 +2,7 @@ import { fetch } from 'cross-undici-fetch'
 
 export const getAssessment = async ({ address }) => {
   const response = await fetch(
-    `https://data.calgary.ca/resource/6zp6-pxei.json?ADDRESS=${address}&$order=ROLL_YEAR ASC`
+    `https://data.calgary.ca/resource/4ur7-wsgc.json?ADDRESS=${address}&$order=ROLL_YEAR ASC`
   )
   const json = await response.json()
 
