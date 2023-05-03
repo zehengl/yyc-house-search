@@ -19,8 +19,8 @@ export const getAssessment = async ({ address }) => {
     roll_number: assessment.roll_number,
     assessed_value: assessment.assessed_value,
     assessed_year: assessment.roll_year,
-    latitude: assessment.latitude,
-    longitude: assessment.longitude,
+    latitude: assessment.multipolygon.coordinates[0][0][0][1],
+    longitude: assessment.multipolygon.coordinates[0][0][0][0],
     year_of_construction: assessment.year_of_construction,
   }))
 }
