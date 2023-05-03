@@ -32,7 +32,7 @@ yarn rw dev
 - [Logo](https://www.iconfinder.com/icons/299061/house_icon) by [Paomedia](https://www.iconfinder.com/paomedia)
 - [Icons](https://heroicons.com)
 - Various datasets from [City of Calgary’s Open Data Portal](https://data.calgary.ca)
-  - [Property Assessments](https://data.calgary.ca/Government/Property-Assessments/6zp6-pxei)
+  - [Historical Property Assessments (Parcel)](https://data.calgary.ca/Government/Historical-Property-Assessments-Parcel-/4ur7-wsgc)
   - [Residential Solar Photovoltaic (PV) System Potential](https://data.calgary.ca/Environment/Residential-Solar-Photovoltaic-PV-System-Potential/k85e-i265)
   - [Public Trees](https://data.calgary.ca/Environment/Public-Trees/tfs4-3wwa)
   - [School Locations](https://data.calgary.ca/Services-and-Amenities/School-Locations/fd9t-tdn2)
