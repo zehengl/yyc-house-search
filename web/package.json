@@ -13,15 +13,15 @@
     ]
   },
   "dependencies": {
-    "@redwoodjs/forms": "4.5.0",
-    "@redwoodjs/router": "4.5.0",
-    "@redwoodjs/web": "4.5.0",
+    "@redwoodjs/forms": "5.0.3",
+    "@redwoodjs/router": "5.0.3",
+    "@redwoodjs/web": "5.0.3",
     "esri-loader": "^3.5.0",
     "haversine-distance": "^1.2.1",
     "plotly.js": "^2.22.0",
     "prop-types": "15.8.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-plotly.js": "^2.6.0"
   }
 }
