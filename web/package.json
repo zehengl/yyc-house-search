@@ -13,9 +13,9 @@
     ]
   },
   "dependencies": {
-    "@redwoodjs/forms": "6.0.6",
-    "@redwoodjs/router": "6.0.6",
-    "@redwoodjs/web": "6.0.6",
+    "@redwoodjs/forms": "6.0.7",
+    "@redwoodjs/router": "6.0.7",
+    "@redwoodjs/web": "6.0.7",
     "esri-loader": "^3.5.0",
     "haversine-distance": "^1.2.1",
     "plotly.js": "^2.25.2",
