@@ -8,7 +8,7 @@ export const getSchools = async () => {
 
   return json.map((school) => ({
     name: school.name,
-    latitude: school.the_geom.coordinates[1],
-    longitude: school.the_geom.coordinates[0],
+    latitude: school.point.coordinates[1],
+    longitude: school.point.coordinates[0],
   }))
 }
