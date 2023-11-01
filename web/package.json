@@ -18,7 +18,7 @@
     "@redwoodjs/web": "6.3.2",
     "esri-loader": "^3.5.0",
     "haversine-distance": "^1.2.1",
-    "plotly.js": "^2.26.2",
+    "plotly.js": "^2.27.0",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
