@@ -3345,17 +3345,18 @@ __metadata:
   linkType: hard
 
 "@fastify/reply-from@npm:^9.0.0":
-  version: 9.0.1
-  resolution: "@fastify/reply-from@npm:9.0.1"
+  version: 9.6.0
+  resolution: "@fastify/reply-from@npm:9.6.0"
   dependencies:
     "@fastify/error": ^3.0.0
     end-of-stream: ^1.4.4
+    fast-content-type-parse: ^1.1.0
     fast-querystring: ^1.0.0
     fastify-plugin: ^4.0.0
     pump: ^3.0.0
-    tiny-lru: ^10.0.0
+    tiny-lru: ^11.0.0
     undici: ^5.19.1
-  checksum: eadee7751ec2679cb9ae732258bc53a57e7232f1bec0fd4265e4124e27301dc879972adc024435d36a271b632cbd9283b819a41b71fd44d0d329f74156bede72
+  checksum: 01d6dd4cffb6810415ccf04718d1477acf7acc18ec2f7b26537b994b6037b9ff25df6e2778e1f1017fd35f9cad85a1b7d540db2aa20e21db04b30f4fd3449913
   languageName: node
   linkType: hard
 
@@ -23661,10 +23662,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tiny-lru@npm:^10.0.0":
-  version: 10.0.1
-  resolution: "tiny-lru@npm:10.0.1"
-  checksum: 37cbb0419044026cf3d701734bd03e360315aba338f346736a46d8aaaafec8b4f1054c2e4e614a34ab19a5ad04673ee95fdd2d7b97e2b5e7cf9db2426f00d114
+"tiny-lru@npm:^11.0.0":
+  version: 11.2.5
+  resolution: "tiny-lru@npm:11.2.5"
+  checksum: bda6de074035ca108ce179ba4ceb02a3eca6aab78b5cf161736035f2af562644594435d8fa4c07f098eee96e1a483992025af72f25e6033d54a66cf270fa8372
   languageName: node
   linkType: hard
 
