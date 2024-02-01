@@ -5024,7 +5024,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mapbox/geojson-rewind@npm:^0.5.0":
+"@mapbox/geojson-rewind@npm:^0.5.2":
   version: 0.5.2
   resolution: "@mapbox/geojson-rewind@npm:0.5.2"
   dependencies:
@@ -5471,6 +5471,36 @@ __metadata:
   version: 3.8.1
   resolution: "@plotly/d3@npm:3.8.1"
   checksum: 71473d9f495ba415c3f2d4af9186de7e5fae4e38283d89f88921a736d6bd7187227af9d54da7927f89f3e5e4042931df9e6103163293e644e04ca327c752c4d1
+  languageName: node
+  linkType: hard
+
+"@plotly/mapbox-gl@npm:v1.13.4":
+  version: 1.13.4
+  resolution: "@plotly/mapbox-gl@npm:1.13.4"
+  dependencies:
+    "@mapbox/geojson-rewind": ^0.5.2
+    "@mapbox/geojson-types": ^1.0.2
+    "@mapbox/jsonlint-lines-primitives": ^2.0.2
+    "@mapbox/mapbox-gl-supported": ^1.5.0
+    "@mapbox/point-geometry": ^0.1.0
+    "@mapbox/tiny-sdf": ^1.1.1
+    "@mapbox/unitbezier": ^0.0.0
+    "@mapbox/vector-tile": ^1.3.1
+    "@mapbox/whoots-js": ^3.1.0
+    csscolorparser: ~1.0.3
+    earcut: ^2.2.2
+    geojson-vt: ^3.2.1
+    gl-matrix: ^3.2.1
+    grid-index: ^1.1.0
+    murmurhash-js: ^1.0.0
+    pbf: ^3.2.1
+    potpack: ^1.0.1
+    quickselect: ^2.0.0
+    rw: ^1.3.3
+    supercluster: ^7.1.0
+    tinyqueue: ^2.0.3
+    vt-pbf: ^3.1.1
+  checksum: e528983335ef8d8ef564e2c0b21a98888b2220750d069679a334d91a43487d12dbbaaf6c798e47ba42f8a5d17dd996207cb1f2ed081d00705631d8cbfcba0a44
   languageName: node
   linkType: hard
 
@@ -9229,6 +9259,13 @@ __metadata:
   version: 1.0.2
   resolution: "balanced-match@npm:1.0.2"
   checksum: 9308baf0a7e4838a82bbfd11e01b1cb0f0cf2893bc1676c27c2a8c0e70cbae1c59120c3268517a8ae7fb6376b4639ef81ca22582611dbee4ed28df945134aaee
+  languageName: node
+  linkType: hard
+
+"base64-arraybuffer@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "base64-arraybuffer@npm:1.0.2"
+  checksum: 3acac95c70f9406e87a41073558ba85b6be9dbffb013a3d2a710e3f2d534d506c911847d5d9be4de458af6362c676de0a5c4c2d7bdf4def502d00b313368e72f
   languageName: node
   linkType: hard
 
@@ -18142,37 +18179,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mapbox-gl@npm:1.10.1":
-  version: 1.10.1
-  resolution: "mapbox-gl@npm:1.10.1"
-  dependencies:
-    "@mapbox/geojson-rewind": ^0.5.0
-    "@mapbox/geojson-types": ^1.0.2
-    "@mapbox/jsonlint-lines-primitives": ^2.0.2
-    "@mapbox/mapbox-gl-supported": ^1.5.0
-    "@mapbox/point-geometry": ^0.1.0
-    "@mapbox/tiny-sdf": ^1.1.1
-    "@mapbox/unitbezier": ^0.0.0
-    "@mapbox/vector-tile": ^1.3.1
-    "@mapbox/whoots-js": ^3.1.0
-    csscolorparser: ~1.0.3
-    earcut: ^2.2.2
-    geojson-vt: ^3.2.1
-    gl-matrix: ^3.2.1
-    grid-index: ^1.1.0
-    minimist: ^1.2.5
-    murmurhash-js: ^1.0.0
-    pbf: ^3.2.1
-    potpack: ^1.0.1
-    quickselect: ^2.0.0
-    rw: ^1.3.3
-    supercluster: ^7.0.0
-    tinyqueue: ^2.0.3
-    vt-pbf: ^3.1.1
-  checksum: 35d797c69407ac0c3fa6d8a57d337eda61f23476cac72b55c5a2dd1215d19761e02083d51b0e1874d92fcd431e569c2c67a1e75e1619469ef69355f15a6babdd
-  languageName: node
-  linkType: hard
-
 "math-log2@npm:^1.0.1":
   version: 1.0.1
   resolution: "math-log2@npm:1.0.1"
@@ -20018,16 +20024,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"plotly.js@npm:^2.27.1":
-  version: 2.27.1
-  resolution: "plotly.js@npm:2.27.1"
+"plotly.js@npm:^2.28.0":
+  version: 2.28.0
+  resolution: "plotly.js@npm:2.28.0"
   dependencies:
     "@plotly/d3": 3.8.1
     "@plotly/d3-sankey": 0.7.2
     "@plotly/d3-sankey-circular": 0.33.1
+    "@plotly/mapbox-gl": v1.13.4
     "@turf/area": ^6.4.0
     "@turf/bbox": ^6.4.0
     "@turf/centroid": ^6.0.2
+    base64-arraybuffer: ^1.0.2
     canvas-fit: ^1.5.0
     color-alpha: 1.0.4
     color-normalize: 1.5.0
@@ -20049,7 +20057,6 @@ __metadata:
     has-hover: ^1.0.1
     has-passive-events: ^1.0.0
     is-mobile: ^4.0.0
-    mapbox-gl: 1.10.1
     mouse-change: ^1.4.0
     mouse-event-offset: ^3.0.2
     mouse-wheel: ^1.2.0
@@ -20061,7 +20068,7 @@ __metadata:
     regl: "npm:@plotly/regl@^2.1.2"
     regl-error2d: ^2.0.12
     regl-line2d: ^3.1.2
-    regl-scatter2d: ^3.2.9
+    regl-scatter2d: ^3.3.1
     regl-splom: ^1.0.14
     strongly-connected-components: ^1.0.1
     superscript-text: ^1.0.0
@@ -20071,7 +20078,7 @@ __metadata:
     topojson-client: ^3.1.0
     webgl-context: ^2.2.0
     world-calendars: ^1.0.3
-  checksum: 38cea533edb7d21e5d7fea45e8c3cee15957746dbdc425c2e17e3df898de87ac2c3138730acb99c3f00cd142c94c3a148348d74c7083e395315c270b2d812447
+  checksum: 9ebf5cae16230296f4c973e2727dd96158eec6e5b17ce74675864ceb092804e9783b71e5f766714e82e44e01a4af91927971710d523011026a9a665c6ca45c44
   languageName: node
   linkType: hard
 
@@ -21462,9 +21469,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regl-scatter2d@npm:^3.2.9":
-  version: 3.2.9
-  resolution: "regl-scatter2d@npm:3.2.9"
+"regl-scatter2d@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "regl-scatter2d@npm:3.3.1"
   dependencies:
     "@plotly/point-cluster": ^3.1.9
     array-range: ^1.0.1
@@ -21481,7 +21488,7 @@ __metadata:
     pick-by-alias: ^1.2.0
     to-float32: ^1.1.0
     update-diff: ^1.1.0
-  checksum: 571d2332cc3dedadfd4888dbd144407ed44875c2e6f98331116c243558e5e40efc4f40b134cf8bb33e423981c159754fa5906336f2fd46a3111b6fb5596f9385
+  checksum: 9a7f69d2039aeb1cca125d0d101cb122234b9e4ac56e190c9f434198ecd27411d6d4b70e2f2aee5a97471060aef290b74b9cac434398166ac330c47901e99283
   languageName: node
   linkType: hard
 
@@ -23288,7 +23295,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supercluster@npm:^7.0.0":
+"supercluster@npm:^7.1.0":
   version: 7.1.5
   resolution: "supercluster@npm:7.1.5"
   dependencies:
@@ -25038,7 +25045,7 @@ __metadata:
     "@redwoodjs/web": 6.6.4
     esri-loader: ^3.5.0
     haversine-distance: ^1.2.1
-    plotly.js: ^2.27.1
+    plotly.js: ^2.28.0
     prop-types: 15.8.1
     react: 18.2.0
     react-dom: 18.2.0
