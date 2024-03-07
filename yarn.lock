@@ -14796,7 +14796,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glslify@npm:^7.0.0, glslify@npm:^7.1.1":
+"glslify@npm:^7.0.0":
   version: 7.1.1
   resolution: "glslify@npm:7.1.1"
   dependencies:
@@ -20047,9 +20047,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"plotly.js@npm:^2.29.0":
-  version: 2.29.0
-  resolution: "plotly.js@npm:2.29.0"
+"plotly.js@npm:^2.30.0":
+  version: 2.30.0
+  resolution: "plotly.js@npm:2.30.0"
   dependencies:
     "@plotly/d3": 3.8.1
     "@plotly/d3-sankey": 0.7.2
@@ -20076,7 +20076,6 @@ __metadata:
     fast-isnumeric: ^1.1.4
     gl-mat4: ^1.2.0
     gl-text: ^1.3.1
-    glslify: ^7.1.1
     has-hover: ^1.0.1
     has-passive-events: ^1.0.0
     is-mobile: ^4.0.0
@@ -20090,7 +20089,7 @@ __metadata:
     probe-image-size: ^7.2.3
     regl: "npm:@plotly/regl@^2.1.2"
     regl-error2d: ^2.0.12
-    regl-line2d: ^3.1.2
+    regl-line2d: ^3.1.3
     regl-scatter2d: ^3.3.1
     regl-splom: ^1.0.14
     strongly-connected-components: ^1.0.1
@@ -20101,7 +20100,7 @@ __metadata:
     topojson-client: ^3.1.0
     webgl-context: ^2.2.0
     world-calendars: ^1.0.3
-  checksum: 0001f80362b9f5bd3166f2bda94d9fbbae16f954d22b81450ee9944602ebbe65e63f787b8f2e16ba6edab5f25deb3fad4c28968522c22af8e9d2a62e0f52b49c
+  checksum: 594260143bed12fdcf4d0c89a8f9b12db33d127744a4512c3968fc57431ef3270c447c9a3575e47d4849b95c2ca52d4810a8d436cc69dcef38b77f3be8d260e6
   languageName: node
   linkType: hard
 
@@ -21448,9 +21447,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regl-line2d@npm:^3.1.2":
-  version: 3.1.2
-  resolution: "regl-line2d@npm:3.1.2"
+"regl-line2d@npm:^3.1.3":
+  version: 3.1.3
+  resolution: "regl-line2d@npm:3.1.3"
   dependencies:
     array-bounds: ^1.0.1
     array-find-index: ^1.0.2
@@ -21459,12 +21458,11 @@ __metadata:
     earcut: ^2.1.5
     es6-weak-map: ^2.0.3
     flatten-vertex-data: ^1.0.2
-    glslify: ^7.0.0
     object-assign: ^4.1.1
     parse-rect: ^1.2.0
     pick-by-alias: ^1.2.0
     to-float32: ^1.1.0
-  checksum: 42d04016d74fcfb888c73300cdc7230e05d780079a5c274a8135f811d0a57efc11bb7dff308ad523a48c9dc1ca945c46eeb9c118d4c0231562292a915fa2c369
+  checksum: 70673f4b362db65cf878d2008847cb5c6f08c3b0b15c6e4df896f276a6b1b5185aaed2e0248fafe8d2c203d88814f6026060b2656d532d87268151f7c011dabc
   languageName: node
   linkType: hard
 
@@ -25075,7 +25073,7 @@ __metadata:
     "@redwoodjs/web": 6.6.4
     esri-loader: ^3.5.0
     haversine-distance: ^1.2.1
-    plotly.js: ^2.29.0
+    plotly.js: ^2.30.0
     prop-types: 15.8.1
     react: 18.2.0
     react-dom: 18.2.0
