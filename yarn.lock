@@ -5474,7 +5474,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plotly/mapbox-gl@npm:v1.13.4":
+"@plotly/mapbox-gl@npm:1.13.4":
   version: 1.13.4
   resolution: "@plotly/mapbox-gl@npm:1.13.4"
   dependencies:
@@ -20066,14 +20066,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"plotly.js@npm:^2.30.1":
-  version: 2.30.1
-  resolution: "plotly.js@npm:2.30.1"
+"plotly.js@npm:^2.31.1":
+  version: 2.31.1
+  resolution: "plotly.js@npm:2.31.1"
   dependencies:
     "@plotly/d3": 3.8.1
     "@plotly/d3-sankey": 0.7.2
     "@plotly/d3-sankey-circular": 0.33.1
-    "@plotly/mapbox-gl": v1.13.4
+    "@plotly/mapbox-gl": 1.13.4
     "@turf/area": ^6.4.0
     "@turf/bbox": ^6.4.0
     "@turf/centroid": ^6.0.2
@@ -20119,7 +20119,7 @@ __metadata:
     topojson-client: ^3.1.0
     webgl-context: ^2.2.0
     world-calendars: ^1.0.3
-  checksum: 05b548aaa5f74e4b15bd3c55086226f7a4137fe3b3fa144ab2f672ec78470fab5b404e9a17ad09c54f4ae2b24ce61658b03d9af91f77feade000839afc501f56
+  checksum: b594715b6b6af006bfc0a744305250edda1c363facdcca357c7890d343ef86394ae06abbfbd7c63c5be4334ee11b4e58ebc9152cbf72b7d95b134a100550d91b
   languageName: node
   linkType: hard
 
@@ -25104,7 +25104,7 @@ __metadata:
     "@redwoodjs/web": 6.6.4
     esri-loader: ^3.5.0
     haversine-distance: ^1.2.1
-    plotly.js: ^2.30.1
+    plotly.js: ^2.31.1
     prop-types: 15.8.1
     react: 18.2.0
     react-dom: 18.2.0
