@@ -1,5 +1,5 @@
-import haversine from 'haversine-distance'
 import Plot from 'react-plotly.js'
+import haversine from 'haversine-distance'
 
 export const QUERY = gql`
   query GET_INFO($address: String!) {
@@ -522,7 +522,7 @@ export const Success = ({
                 {nearbyHospitalNames.length > 0 ? (
                   nearbyHospitalNames.map((name) => <p key={name}>{name}</p>)
                 ) : (
-                  <p>No nearby Hospitals found.</p>
+                  <p>No nearby hospitals found.</p>
                 )}
               </dd>
             </div>
