@@ -5467,10 +5467,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plotly/d3@npm:3.8.1":
-  version: 3.8.1
-  resolution: "@plotly/d3@npm:3.8.1"
-  checksum: 71473d9f495ba415c3f2d4af9186de7e5fae4e38283d89f88921a736d6bd7187227af9d54da7927f89f3e5e4042931df9e6103163293e644e04ca327c752c4d1
+"@plotly/d3@npm:3.8.2":
+  version: 3.8.2
+  resolution: "@plotly/d3@npm:3.8.2"
+  checksum: e578fd3d3850b2c2671e0fcc856676925e81da79f25c940cf2160dc19fe846924181c7c7ea0f03d499d3d4d1ff552d36506a828f5a6482db5707fb2bc4a29ebc
   languageName: node
   linkType: hard
 
@@ -15199,10 +15199,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"haversine-distance@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "haversine-distance@npm:1.2.1"
-  checksum: 0a3906193bc1f3567402b8ed91b8066053f9ce7274f2634b4a0875661141902b7eae983032eb1d8f6f5d78958e5956abe34ac0631914d3801ca3fddf29e017e0
+"haversine-distance@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "haversine-distance@npm:1.2.3"
+  checksum: e1f32a041028dbe74bbc7843f6c0dbefcc127d34fe371e9c5e3e671c2f454d79e3a9a7dcec9529d7cb6d79623c1aeb608644b184b493235212f79bc83ba4e692
   languageName: node
   linkType: hard
 
@@ -20066,11 +20066,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"plotly.js@npm:^2.32.0":
-  version: 2.32.0
-  resolution: "plotly.js@npm:2.32.0"
+"plotly.js@npm:^2.33.0":
+  version: 2.33.0
+  resolution: "plotly.js@npm:2.33.0"
   dependencies:
-    "@plotly/d3": 3.8.1
+    "@plotly/d3": 3.8.2
     "@plotly/d3-sankey": 0.7.2
     "@plotly/d3-sankey-circular": 0.33.1
     "@plotly/mapbox-gl": 1.13.4
@@ -20119,7 +20119,7 @@ __metadata:
     topojson-client: ^3.1.0
     webgl-context: ^2.2.0
     world-calendars: ^1.0.3
-  checksum: f013b3a95788c205c73b0975ef97892123b41d8814c49175790ae40714287d39cd498be42af2059ea6f72948f4be056b8cd44c32e7915532db2d313f3359bad7
+  checksum: eaea98e342c47ff00ec37b640cbfba82e5718bceaf04839f3437b8890bd2f7af53e8433112af70c76080fa05b65b6835626f1b2ba8ba68cc873d4f2d7cbbe791
   languageName: node
   linkType: hard
 
@@ -25112,8 +25112,8 @@ __metadata:
     "@redwoodjs/router": 6.6.4
     "@redwoodjs/web": 6.6.4
     esri-loader: ^3.5.0
-    haversine-distance: ^1.2.1
-    plotly.js: ^2.32.0
+    haversine-distance: ^1.2.3
+    plotly.js: ^2.33.0
     prop-types: 15.8.1
     react: 18.3.1
     react-dom: 18.3.1
