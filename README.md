@@ -1,7 +1,3 @@
-<div align="center">
-    <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678085-house-512.png" alt="logo" height="128">
-</div>
-
 # yyc-house-search
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ef409278-83c3-4900-9e20-a04178cfc4b3/deploy-status)](https://app.netlify.com/sites/yyc-house-search/deploys)
@@ -29,7 +25,6 @@ yarn rw dev
 
 ## Credits
 
-- [Logo](https://www.iconfinder.com/icons/299061/house_icon) by [Paomedia](https://www.iconfinder.com/paomedia)
 - [Icons](https://heroicons.com)
 - Various datasets from [City of Calgary’s Open Data Portal](https://data.calgary.ca)
   - [Historical Property Assessments (Parcel)](https://data.calgary.ca/Government/Historical-Property-Assessments-Parcel-/4ur7-wsgc)
