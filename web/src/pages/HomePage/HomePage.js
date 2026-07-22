@@ -41,7 +41,7 @@ const HomePage = () => {
         sources: [
           {
             locator: new Locator({
-              url: 'http://gis.calgary.ca/arcgis/rest/services/pub_Locators/CalgaryUniversalLocator/GeocodeServer',
+              url: 'https://gis.calgary.ca/arcgis/rest/services/pub_Locator_Pro/CalgaryUniversalLocator/GeocodeServer',
             }),
             singleLineFieldName: 'SingleLine',
             name: 'City of Calgary Geocoding Service',
