@@ -39,4 +39,4 @@ yarn rw dev
 - Various mapping components from City of Calgary’s Geospatial Business Solutions (GBS)
   - [Aerial Image](https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/CurrentOrthophoto_WMASP/MapServer?cacheKey=8c58e2af64f46f91)
   - [Basemap](https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/Calgary_Basemap/MapServer?cacheKey=831504eaa9b2633d)
-  - [Geocoder](http://gis.calgary.ca/arcgis/rest/services/pub_Locators/CalgaryUniversalLocator/GeocodeServer)
+  - [Geocoder](https://gis.calgary.ca/arcgis/rest/services/pub_Locator_Pro/CalgaryUniversalLocator/GeocodeServer)
