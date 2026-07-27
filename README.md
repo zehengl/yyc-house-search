@@ -25,7 +25,6 @@ yarn rw dev
 
 ## Credits
 
-- [Icons](https://heroicons.com)
 - Various datasets from [City of Calgary’s Open Data Portal](https://data.calgary.ca)
   - [Historical Property Assessments (Parcel)](https://data.calgary.ca/Government/Historical-Property-Assessments-Parcel-/4ur7-wsgc)
   - [Residential Solar Photovoltaic (PV) System Potential](https://data.calgary.ca/Environment/Residential-Solar-Photovoltaic-PV-System-Potential/k85e-i265)
@@ -37,6 +36,6 @@ yarn rw dev
   - [Calgary Public Library Locations and Hours](https://data.calgary.ca/Recreation-and-Culture/Calgary-Public-Library-Locations-and-Hours/m9y7-ui7j)
   - [Community Services](https://data.calgary.ca/Services-and-Amenities/Community-Services/x34e-bcjz)
 - Various mapping components from City of Calgary’s Geospatial Business Solutions (GBS)
-  - [Aerial Image](https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/CurrentOrthophoto_WMASP/MapServer?cacheKey=8c58e2af64f46f91)
-  - [Basemap](https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/Calgary_Basemap/MapServer?cacheKey=831504eaa9b2633d)
+  - [Aerial Image](https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/CurrentOrthophoto_WMASP/MapServer)
+  - [Basemap](https://tiles.arcgis.com/tiles/AVP60cs0Q9PEA8rH/arcgis/rest/services/Calgary_Basemap/MapServer)
   - [Geocoder](https://gis.calgary.ca/arcgis/rest/services/pub_Locator_Pro/CalgaryUniversalLocator/GeocodeServer)
