@@ -545,6 +545,7 @@ export const Success = ({
           layout={{
             title: 'Assessment History',
             showlegend: false,
+            barcornerradius: 10,
           }}
         />
       </div>
