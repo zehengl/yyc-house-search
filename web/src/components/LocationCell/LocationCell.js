@@ -213,8 +213,8 @@ export const Success = ({
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
                 The property was assessed of ${assessment.assessed_value} in{' '}
-                {assessment.assessed_year}, and originally built in{' '}
-                {assessment.year_of_construction}.
+                {assessment.assessed_year}
+                {assessment.year_of_construction ? `, and originally built in ${assessment.year_of_construction}`:'.'}
               </dd>
             </div>
           </dl>
