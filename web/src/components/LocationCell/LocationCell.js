@@ -185,7 +185,7 @@ export const Success = ({
                 </p>
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
-                The roll number is {assessment.roll_number}.
+                The roll number is <strong>{assessment.roll_number}</strong>.
               </dd>
             </div>
 
@@ -212,9 +212,9 @@ export const Success = ({
                 </p>
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
-                The property was assessed of ${assessment.assessed_value} in{' '}
+                The property was assessed of <strong>${assessment.assessed_value}</strong> in{' '}
                 {assessment.assessed_year}
-                {assessment.year_of_construction ? `, and originally built in ${assessment.year_of_construction}`:'.'}
+                {assessment.year_of_construction ? `, which was originally built in ${assessment.year_of_construction}`:''}.
               </dd>
             </div>
           </dl>
