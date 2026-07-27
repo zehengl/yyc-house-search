@@ -8,7 +8,7 @@ export const getPublicLibraries = async () => {
 
   return json.map((publicLibrary) => ({
     name: publicLibrary.library,
-    latitude: publicLibrary.location.latitude,
-    longitude: publicLibrary.location.longitude,
-  }))
+    latitude: publicLibrary?.location?.latitude,
+    longitude: publicLibrary?.location?.longitude,
+  })).filter((item) => item.latitude !== undefined)
 }
