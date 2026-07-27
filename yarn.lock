@@ -15611,10 +15611,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"haversine-distance@npm:^1.2.3":
-  version: 1.2.3
-  resolution: "haversine-distance@npm:1.2.3"
-  checksum: e1f32a041028dbe74bbc7843f6c0dbefcc127d34fe371e9c5e3e671c2f454d79e3a9a7dcec9529d7cb6d79623c1aeb608644b184b493235212f79bc83ba4e692
+"haversine-distance@npm:^1.2.4":
+  version: 1.2.4
+  resolution: "haversine-distance@npm:1.2.4"
+  checksum: d34bdd7ca9dc744cd174415b83b85dedb4a2452ab976875b1b1125744fc86c8ab57bd6eb5229284c92406f54b90526f859a9bdc60dbb01fb03402947f7204e15
   languageName: node
   linkType: hard
 
@@ -25835,7 +25835,7 @@ __metadata:
     "@redwoodjs/router": 6.6.4
     "@redwoodjs/web": 6.6.4
     esri-loader: ^3.5.0
-    haversine-distance: ^1.2.3
+    haversine-distance: ^1.2.4
     plotly.js: ^2.35.3
     prop-types: 15.8.1
     react: 18.3.1
