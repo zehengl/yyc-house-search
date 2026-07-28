@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 
 import { loadModules } from 'esri-loader'
 
-import { MetaTags } from '@redwoodjs/web'
+import { Metadata } from '@redwoodjs/web'
 
 import AppLayout from 'src/layouts/AppLayout'
 
@@ -112,16 +112,18 @@ const HomePage = () => {
   return (
     <>
       <AppLayout>
-        <MetaTags title="Home" description="Home page" />
-        <div style={{ height: '100vh' }} ref={mapRef} />
+        <Metadata title="Home" description="Home page" />
+        <div style={{ height: '98vh', width: '98vw', paddingTop: '1vh', paddingBottom: '1vh', paddingLeft: '1vw', paddingRight: '1vw'}} ref={mapRef} />
         <span
           className="esri-widget"
           style={{
-            top: '5.5rem',
+            top: '6rem',
             left: '1rem',
             position: 'absolute',
             padding: '.5rem',
             opacity: 0.8,
+            paddingLeft: '1vw',
+            paddingTop: '1vh'
           }}
         >
           {' '}
