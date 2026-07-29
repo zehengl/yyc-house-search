@@ -25,6 +25,7 @@ yarn rw dev
 
 ## Credits
 
+- [Icons](https://heroicons.com)
 - Various datasets from [City of Calgary’s Open Data Portal](https://data.calgary.ca)
   - [Historical Property Assessments (Parcel)](https://data.calgary.ca/Government/Historical-Property-Assessments-Parcel-/4ur7-wsgc)
   - [Residential Solar Photovoltaic (PV) System Potential](https://data.calgary.ca/Environment/Residential-Solar-Photovoltaic-PV-System-Potential/k85e-i265)
